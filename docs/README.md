@@ -1,3 +1,45 @@
+# 기능 목록
+
+## Car
+- **필드**
+  - private final String **name**
+  - private int **moved**
+    - 움직인 거리
+    - 기본값 0
+  - private static ArrayList\<Car\> **cars**
+    - 생성된 차 리스트
+- **메서드**
+  - public static void **move_cars()**
+    - Controller에서 호출
+    - cars에 있는 차를 움직임
+  - public static ArrayList\<Car\> **get_cars()**
+    - Controller에서 호출
+    - cars를 반환
+  - public String **get_name()**
+  - public int **get_moved()**
+  - private **Car(String name)**
+    - 생성자
+    - 생성된 인스턴스를 cars에 추가
+
+## Controller
+유저와 직접 맞닿아서 레이스를 진행
+- **필드**
+  - private static ArrayList\<String\> **car_name_list**
+    - add_car_names에서 값을 받아 저장
+  - private static int **loop**
+    - set_loop에서 값을 받아 저장
+- **메서드**
+  - public static void **add_car_names(String name)**
+    - 차 이름은 5자 이하
+  - public static void **set_loop(int num)**
+  - public static void **start_race()**
+    - 레이스 진행, 출력 함수 호출
+  - private static void **print_progress()**
+    - 현재 진행 상황 출력
+  - private static void **print_winners()**
+    - 현재 진행 상황 기준 우승자 출력
+---
+
 # ICT위원회 - BE B 트랙 과제 제출
 
 ## 진행 가이드
