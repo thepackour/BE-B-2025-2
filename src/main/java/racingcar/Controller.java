@@ -17,10 +17,9 @@ public class Controller {
     public static void add_car_names() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         String[] names = readLine().split(",");
-        if (names.length == 0) throw new IllegalArgumentException();
         Arrays.stream(names)
                 .forEach(s -> {
-                    if (s.length() > 5) throw new IllegalArgumentException();
+                    if (s.isEmpty() || s.length() > 5) throw new IllegalArgumentException();
                     else car_name_list.add(s);
                 });
     }
