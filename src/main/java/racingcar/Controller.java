@@ -15,7 +15,7 @@ public class Controller {
     private static int loop;
 
     public static void add_car_names() {
-        System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분");
+        System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         String[] names = readLine().split(",");
         if (names.length == 0) throw new IllegalArgumentException();
         Arrays.stream(names)
@@ -38,7 +38,7 @@ public class Controller {
             String name = car.get_name();
             int moved = car.get_moved();
 
-            System.out.print(name + " : " + "-".repeat(moved));
+            System.out.println(name + " : " + "-".repeat(moved));
         }
         System.out.println();
     }
