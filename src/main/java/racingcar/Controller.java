@@ -25,5 +25,17 @@ public class Controller {
         catch (NumberFormatException e) { throw new IllegalArgumentException(); }
     }
 
+    public static void print_progress() {
+        ArrayList<Car> cars = Car.get_cars();
+        for (Car car : cars) {
+            String name = car.get_name();
+            int moved = car.get_moved();
+
+            System.out.print(name + " : ");
+            System.out.println("-".repeat(moved));
+        }
+        System.out.println();
+    }
+
     private Controller() {}
 }
