@@ -59,10 +59,7 @@ public class Controller {
     }
 
     public static void start_race() {
-        add_car_names();
         car_name_list.forEach(Car::create_car);
-
-        set_loop();
         System.out.println();
         System.out.println("실행 결과");
         for (int i = 0; i < loop; i++) {
