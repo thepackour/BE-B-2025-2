@@ -63,7 +63,10 @@ public class Controller {
         set_loop();
         System.out.println();
         System.out.println("실행 결과");
-        for (int i = 0; i < loop; i++) print_progress();
+        for (int i = 0; i < loop; i++) {
+            Car.move_cars();
+            print_progress();
+        }
         print_winners();
     }
 
