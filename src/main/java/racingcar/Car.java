@@ -7,6 +7,10 @@ public class Car {
     private int moved = 0;
     private static ArrayList<Car> cars = new ArrayList<Car>();
 
+    public String get_name() { return name; }
+
+    public int get_moved() { return moved; }
+
     public Car(String name) {
         this.name = name;
     }
