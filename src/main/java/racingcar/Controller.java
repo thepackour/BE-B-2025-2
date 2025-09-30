@@ -26,6 +26,7 @@ public class Controller {
     }
 
     public static void set_loop() {
+        System.out.println("시도할 회수는 몇회인가요?");
         String num = readLine();
         try { loop = Integer.parseInt(num); }
         catch (NumberFormatException e) { throw new IllegalArgumentException(); }
@@ -37,8 +38,7 @@ public class Controller {
             String name = car.get_name();
             int moved = car.get_moved();
 
-            System.out.print(name + " : ");
-            System.out.println("-".repeat(moved));
+            System.out.print(name + " : " + "-".repeat(moved));
         }
         System.out.println();
     }
@@ -56,6 +56,15 @@ public class Controller {
                     .collect(Collectors.joining(", "));
             System.out.println("최종 우승자 : " + res);
         }
+    }
+
+    public static void start_race() {
+        add_car_names();
+        set_loop();
+        System.out.println();
+        System.out.println("실행 결과");
+        for (int i = 0; i < loop; i++) print_progress();
+        print_winners();
     }
 
     private Controller() {}
