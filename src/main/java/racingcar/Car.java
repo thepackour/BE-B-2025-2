@@ -17,13 +17,17 @@ public class Car {
         }
     }
 
+    public static void create_car(String name) {
+        cars.add(new Car(name));
+    }
+
     public String get_name() { return name; }
 
     public int get_moved() { return moved; }
 
     private void move() { this.moved++; }
 
-    public Car(String name) {
+    private Car(String name) {
         this.name = name;
     }
 }
